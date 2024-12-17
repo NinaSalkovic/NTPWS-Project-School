@@ -1,0 +1,1 @@
+find an image for banner, link in banner.php

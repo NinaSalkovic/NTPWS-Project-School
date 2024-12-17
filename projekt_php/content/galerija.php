@@ -1,40 +1,10 @@
-<?php 
-print '
-<!DOCTYPE html>
-<html lang="hr">
-<head>
-	<link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta name="description" content="Galerija slika - PHP projekt">
-	<meta name="keywords" content="galerija, slike, projekt">
-	<meta name="author" content="Nina Šalković">
-	<title>Galerija</title>
-</head>
-
-<body>
-<header>
-	<img src="banner.jpg" alt="Blog Banner" class="banner">
-	<nav>
-		<ul>
-			<li><a href="index.php">Početna stranica</a></li>
-			<li><a href="novosti.php">Novosti</a></li>
-			<li><a href="kontakt.php">Kontakt</a></li>
-			<li><a href="onama.php">O nama</a></li>
-			<li><a href="galerija.php">Galerija</a></li>
-		</ul>
-	</nav>
-</header>
-
-
 
 <!-- Galerija slika mora imati minimalno 10 slika. -->
 <!-- Slike se otvaraju uvećane klikom na sliku u novom prozoru. -->
 <!-- Svaka slika mora imati opis. -->
 
 
-
-<main>
+<section>
 	<h1>Galerija slika</h1>
 	<p>Dobrodošli u našu galeriju! Kliknite na sliku za uvećani prikaz.</p>
 	<section class="gallery">
@@ -79,24 +49,4 @@ print '
 			<figcaption>Opis slike 10</figcaption>
 		</figure>
 	</section>
-</main>
-
-<footer>
-	<div class="footer-content">
-		<p>&copy; 2024 Nina Šalković. Sva prava pridržana.</p>
-		<div class="social-links">
-			<a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook" class="social-icon"></a>
-			<a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter" class="social-icon"></a>
-			<a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram" class="social-icon"></a>
-		</div>
-		<div class="github-link">
-			<a href="https://github.com/your-username/your-repo" target="_blank">
-				<img src="github-icon.png" alt="GitHub" class="github-icon">
-				Pogledajte naš GitHub
-			</a>
-		</div>
-	</div>
-</footer>
-</body>
-</html>';
-?>
+</section>

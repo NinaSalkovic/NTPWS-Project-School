@@ -1,3 +1,5 @@
+<?php ?>
+
 <section>
     <h1>Naslov članka 1</h1>
     <p>Datum objave: <strong>10.06.2024.</strong></p>

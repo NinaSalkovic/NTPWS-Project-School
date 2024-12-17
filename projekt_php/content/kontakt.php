@@ -1,4 +1,6 @@
 
+<?php ?>
+
 <section>
 	<h1>Kontaktirajte nas</h1>
 	<section>

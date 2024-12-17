@@ -1,5 +1,7 @@
 <!-- uredi tekst (3 odlomka), dodaj video koji radi, stavi video tako da tekst wrap around radi? -->
 
+<?php ?>
+
 <section>
 	<h1>O nama</h1>
 	<p>Dobrodošli na naš blog posvećen tehnologiji, inovacijama i kreativnosti. Naša misija je stvoriti platformu na kojoj ljubitelji tehnologije mogu pronaći inspiraciju, naučiti nešto novo i podijeliti svoja iskustva.</p>

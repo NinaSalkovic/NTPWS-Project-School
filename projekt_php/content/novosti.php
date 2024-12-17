@@ -1,5 +1,7 @@
 <!-- svaki članak mora imati malu sliku (thumbnail), naslov, kratak tekst, datum objave i veza na više o tom članku. -->
 
+<?php ?>
+
 <section>
     <h1>Novosti</h1>
     <p>Ovdje možete pronaći najnovije vijesti i članke iz naše škole.</p>

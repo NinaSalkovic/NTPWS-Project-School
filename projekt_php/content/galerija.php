@@ -3,6 +3,8 @@
 <!-- Slike se otvaraju uvećane klikom na sliku u novom prozoru. -->
 <!-- Svaka slika mora imati opis. -->
 
+<?php ?>
+
 
 <section>
 	<h1>Galerija slika</h1>

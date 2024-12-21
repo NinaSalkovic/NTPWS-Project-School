@@ -1,4 +1,5 @@
-<?php ?>
+<?php 
+?>
 
 <section>
     <h1>Naslov članka 1</h1>

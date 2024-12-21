@@ -68,14 +68,17 @@ $menu = isset($_GET['menu']) ? (int) $_GET['menu'] : 1;
                     include 'content/galerija.php';
                     break;
                 case 6:
-                    include 'content/registracija.php';
+                    include 'registracija.php';
+                    break;
+                case 7:
+                    include 'prijava.php';
                     break;
                 default:
-                    include 'content/home.php';
+                    include 'content/pocetna.php';
                     break;
             }
         } else {
-            include 'content/home.php';
+            include 'content/pocetna.php';
         }
         ?>
     </main>

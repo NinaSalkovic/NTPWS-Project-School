@@ -6,5 +6,6 @@
         <li><a href="index.php?menu=4">O nama</a></li>
         <li><a href="index.php?menu=5">Galerija</a></li>
         <li><a href="index.php?menu=6">Registriraj se!</a></li>
+        <li><a href="index.php?menu=7">Prijavi se</a></li>
     </ul>
 </nav>

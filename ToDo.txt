@@ -1,1 +1,4 @@
 find an image for banner, link in banner.php
+
+
+- add conditional register/admin/login/logout on index menu; or remove the registriraj se/prijavi se and connect with odjavi se....

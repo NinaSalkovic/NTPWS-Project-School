@@ -3,6 +3,10 @@ include 'db_connect.php';
 ?>
 
 <?php
+session_start();
+?>
+
+<?php
 $menu = isset($_GET['menu']) ? (int) $_GET['menu'] : 1;
 ?>
 
@@ -86,4 +90,12 @@ $menu = isset($_GET['menu']) ? (int) $_GET['menu'] : 1;
     <?php include 'footer.php'; ?>
 </body>
 
-</html>';
+<?php
+if (isset($_SESSION['user_id'])) {
+    echo "User ID: " . $_SESSION['user_id'];
+} else {
+    echo "User is not logged in.";
+}
+?>
+
+</html>

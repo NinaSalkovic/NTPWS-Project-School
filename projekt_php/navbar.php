@@ -1,3 +1,4 @@
+
 <nav>
     <ul>
         <li><a href="index.php?menu=1">Početna stranica</a></li>
@@ -5,7 +6,13 @@
         <li><a href="index.php?menu=3">Kontakt</a></li>
         <li><a href="index.php?menu=4">O nama</a></li>
         <li><a href="index.php?menu=5">Galerija</a></li>
-        <li><a href="index.php?menu=6">Registriraj se!</a></li>
-        <li><a href="index.php?menu=7">Prijavi se</a></li>
+
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <li><a href="admin.php">Administracija</a></li>
+            <li><a href="logout.php">Odjava</a></li>
+        <?php else: ?>
+            <li><a href="registracija.php">Registracija</a></li>
+            <li><a href="prijava.php">Prijava</a></li>
+        <?php endif; ?>
     </ul>
 </nav>

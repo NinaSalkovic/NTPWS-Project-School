@@ -1,3 +1,19 @@
 find an image for banner, link in banner.php
 
 admin done, add cms for adding news etc
+
+
+addt for cms:
+ at the Start of CMS Pages (news.php, manage_news.php):
+
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+if ($_SESSION['role'] !== 'editor' && $_SESSION['role'] !== 'admin') {
+    echo "Nemate dozvolu za pristup.";
+    exit();
+}

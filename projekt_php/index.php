@@ -72,10 +72,10 @@ $menu = isset($_GET['menu']) ? (int) $_GET['menu'] : 1;
                     include 'content/galerija.php';
                     break;
                 case 6:
-                    include 'registracija.php';
+                    include 'loginLogout/registracija.php';
                     break;
                 case 7:
-                    include 'prijava.php';
+                    include 'loginLogout/prijava.php';
                     break;
                 default:
                     include 'content/pocetna.php';

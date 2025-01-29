@@ -2,38 +2,42 @@
 session_start();
 include 'db_connect.php';
 
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: prijava.php");
+if ($_SESSION['role'] !== 'admin') {
+    echo "Nemate dozvolu za pristup.";
     exit();
 }
 
-// Fetch user details
-$user_id = $_SESSION['user_id'];
-$stmt = $conn->prepare("SELECT ime, prezime, email FROM users WHERE id = ?");
-$stmt->bind_param("i", $user_id);
-$stmt->execute();
-$result = $stmt->get_result();
-$user = $result->fetch_assoc();
+$result = $conn->query("SELECT id, ime, prezime, email, role, is_active FROM users");
+
+echo "<h2>Upravljanje korisnicima</h2>";
+echo "<table border='1'><tr><th>Ime</th><th>Prezime</th><th>Email</th><th>Rola</th><th>Aktivan</th></tr>";
+
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>
+            <td>{$row['ime']}</td>
+            <td>{$row['prezime']}</td>
+            <td>{$row['email']}</td>
+            <td>
+                <form method='POST' action='update_user.php'>
+                    <input type='hidden' name='user_id' value='{$row['id']}'>
+                    <select name='role'>
+                        <option value='user' " . ($row['role'] == 'user' ? 'selected' : '') . ">User</option>
+                        <option value='editor' " . ($row['role'] == 'editor' ? 'selected' : '') . ">Editor</option>
+                        <option value='admin' " . ($row['role'] == 'admin' ? 'selected' : '') . ">Admin</option>
+                    </select>
+                    <button type='submit'>Promijeni</button>
+                </form>
+            </td>
+            <td>
+                <form method='POST' action='activate_user.php'>
+                    <input type='hidden' name='user_id' value='{$row['id']}'>
+                    <input type='hidden' name='activate' value='" . ($row['is_active'] ? 0 : 1) . "'>
+                    <button type='submit'>" . ($row['is_active'] ? 'Deaktiviraj' : 'Aktiviraj') . "</button>
+                </form>
+            </td>
+          </tr>";
+}
+echo "</table>";
+
+echo "<br><br><a href='index.php'><button>Vrati se na početnu stranicu</button></a>";
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uspješna prijava!</title>
-</head>
-
-<body>
-    <h1>Dobro došli, <?php echo htmlspecialchars($user['ime']); ?>!</h1>
-    <p>vaš email je: <?php echo htmlspecialchars($user['email']); ?></p>
-
-    <nav>
-        <a href="index.php">Vratite se na poćetnu stranicu.</a>
-        <a href="odjava.php">Odjavite se.</a>
-    </nav>
-</body>
-
-</html>

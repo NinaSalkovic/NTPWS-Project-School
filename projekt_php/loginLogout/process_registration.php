@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include '../db_connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ime = trim($conn->real_escape_string($_POST['ime']));
@@ -28,9 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $hashed_lozinka = password_hash($lozinka, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO users (ime, prezime, email, drzava_id, grad, ulica, datum_rodenja, lozinka) 
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssissss", $ime, $prezime, $email, $drzava_id, $grad, $ulica, $datum_rodenja, $hashed_lozinka);
+    $stmt = $conn->prepare("INSERT INTO users (ime, prezime, email, drzava_id, grad, ulica, datum_rodenja, lozinka, role, is_active) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'user', 0)");
+$stmt->bind_param("sssissss", $ime, $prezime, $email, $drzava_id, $grad, $ulica, $datum_rodenja, $hashed_lozinka);
+
 
     if ($stmt->execute()) {
         header("Location: prijava.php");

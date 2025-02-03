@@ -1,5 +1,7 @@
 <!-- svaki članak mora imati malu sliku (thumbnail), naslov, kratak tekst, datum objave i veza na više o tom članku. -->
 
+<?php ?>
+
 <section>
     <h1>Novosti</h1>
     <p>Ovdje možete pronaći najnovije vijesti i članke iz naše škole.</p>
@@ -45,16 +47,5 @@
             </a>
         </article>
     </div>
-
-    <?php
-    include 'db_connect.php';
-    $result = $conn->query("SELECT * FROM news WHERE status = 'approved' ORDER BY created_at DESC");
-
-    while ($row = $result->fetch_assoc()) {
-        echo "<h2>{$row['title']}</h2><p>{$row['content']}</p>";
-    }
-    ?>
-
-
 
 </section>

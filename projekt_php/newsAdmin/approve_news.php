@@ -3,18 +3,15 @@ session_start();
 include '../db_connect.php';
 
 if ($_SESSION['role'] !== 'admin') {
-    die("Nemate dozvolu za ovu akciju.");
+    exit("Nemate dozvolu za pristup.");
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $news_id = $_POST['news_id'];
-    $new_status = isset($_POST['approve']) ? 'approved' : 'archived';
+$id = $_GET['id'];
 
-    $stmt = $conn->prepare("UPDATE news SET status = ? WHERE id = ?");
-    $stmt->bind_param("si", $new_status, $news_id);
-    $stmt->execute();
+$stmt = $conn->prepare("UPDATE news SET status = 'approved' WHERE id = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
 
-    header("Location: manage_news.php");
-    exit();
-}
+header("Location: manage_news.php");
+exit();
 ?>

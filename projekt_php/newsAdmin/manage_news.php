@@ -1,55 +1,49 @@
 <?php
 session_start();
-include '../db_connect.php';  // Adjust path if necessary
+include '../db_connect.php';
 
-// Check user role (admin)
-if ($_SESSION['role'] !== 'admin') {
-    echo "Nemate dozvolu za pristup.";
-    exit();
+if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'editor') {
+    exit("Nemate dozvolu za pristup.");
 }
 
-// Fetch all news from database
-$query = "SELECT id, title, author_id, created_at, status FROM news";
-$result = $conn->query($query);
+$result = $conn->query("SELECT id, title, author_id, status, created_at FROM news");
 
-// Check if the query was successful
-if ($result === false) {
-    die("Error in query: " . $conn->error);  // This will print the error message if the query fails
-}
+echo "<h2>Upravljanje vijestima</h2>";
+echo "<table border='1'>
+        <tr>
+            <th>Naslov</th>
+            <th>Autor</th>
+            <th>Datum</th>
+            <th>Status</th>
+            <th>Slike</th>
+            <th>Akcije</th>
+        </tr>";
 
-echo "<h2>Upravljanje novostima</h2>";
-echo "<table border='1'><tr><th>Naslov</th><th>Autor</th><th>Datum</th><th>Status</th><th>Akcije</th></tr>";
-
-// Loop through news records
 while ($row = $result->fetch_assoc()) {
+    $news_id = $row['id'];
+    $images = $conn->query("SELECT image_path FROM news_images WHERE news_id = $news_id");
+
     echo "<tr>
             <td>{$row['title']}</td>
             <td>{$row['author_id']}</td>
             <td>{$row['created_at']}</td>
-            <td>" . ucfirst($row['status']) . "</td>
+            <td>{$row['status']}</td>
+            <td>";
+    
+    while ($img = $images->fetch_assoc()) {
+        echo "<img src='{$img['image_path']}' width='50' height='50'> ";
+    }
+    
+    echo "</td>
             <td>
-                <form method='POST' action='edit_news.php'>
-                    <input type='hidden' name='news_id' value='{$row['id']}'>
-                    <button type='submit'>Uredi</button>
-                </form>
-
-                <form method='POST' action='archive_news.php'>
-                    <input type='hidden' name='news_id' value='{$row['id']}'>
-                    <button type='submit'>" . ($row['status'] === 'archived' ? 'Poništi arhivu' : 'Arhiviraj') . "</button>
-                </form>
-
-                <form method='POST' action='approve_news.php'>
-                    <input type='hidden' name='news_id' value='{$row['id']}'>
-                    <button type='submit'>" . ($row['status'] === 'approved' ? 'Ponovno odobri' : 'Odobri') . "</button>
-                </form>
-
-                <form method='POST' action='delete_news.php'>
-                    <input type='hidden' name='news_id' value='{$row['id']}'>
-                    <button type='submit' onclick='return confirm(\"Are you sure you want to delete this news?\")'>Obriši</button>
-                </form>
+                <a href='edit_news.php?id={$row['id']}'>Uredi</a> |
+                " . ($_SESSION['role'] === 'admin' ? "<a href='delete_news.php?id={$row['id']}'>Obriši</a> |" : "") . "
+                " . ($_SESSION['role'] === 'admin' ? "<a href='approve_news.php?id={$row['id']}'>Odobri</a>" : "") . "
             </td>
           </tr>";
 }
 
 echo "</table>";
+echo "<br><a href='add_news.php'><button>Dodaj novu vijest</button></a>";
+echo "<br><br><a href='../index.php'><button>Vrati se na početnu</button></a>";
 ?>

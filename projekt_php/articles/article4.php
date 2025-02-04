@@ -1,12 +1,13 @@
 <?php ?>
+<link rel="stylesheet" href="style.css">
 
-<section>
-    <h1>Naslov članka 1</h1>
-    <p>Datum objave: <strong>10.06.2024.</strong></p>
-    <p>Ovo je sadržaj prvog članka koji detaljno opisuje određenu temu vezanu uz školska natjecanja.</p>
-    <p>Natjecanje je održano u našoj školi, a sudjelovali su učenici iz svih razreda...</p>
+<article>
+    <h1>Dani sporta u školi</h1>
+    <p><strong>Datum objave:</strong> 15.03.2024.</p>
+    <p>Održan je tradicionalni školski sportski dan gdje su učenici mogli sudjelovati u raznim disciplinama poput nogometa, košarke, trčanja i štafetnih igara.</p>
+    <p>Pobjednici su nagrađeni medaljama, a svi sudionici su uživali u danu ispunjenom sportom i zajedništvom.</p>
     <figure>
-        <img src="images/thumbnail1.jpg" alt="Slika s natjecanja">
-        <figcaption>Slika: Prikaz školskog natjecanja</figcaption>
+        <img src="images/dani_sporta.jpeg" alt="Školski sportski dan">
+        <figcaption>Slika: Učenici u sportskim aktivnostima</figcaption>
     </figure>
-</section>
+</article>

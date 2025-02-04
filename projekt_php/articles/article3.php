@@ -1,12 +1,12 @@
 <?php ?>
-
-<section>
-    <h1>Naslov članka 1</h1>
-    <p>Datum objave: <strong>10.06.2024.</strong></p>
-    <p>Ovo je sadržaj prvog članka koji detaljno opisuje određenu temu vezanu uz školska natjecanja.</p>
-    <p>Natjecanje je održano u našoj školi, a sudjelovali su učenici iz svih razreda...</p>
+<link rel="stylesheet" href="style.css">
+<article>
+    <h1>Izlet u Nacionalni park Plitvička jezera</h1>
+    <p><strong>Datum objave:</strong> 20.04.2024.</p>
+    <p>Učenici 5. i 6. razreda imali su priliku posjetiti jedno od najljepših mjesta u Hrvatskoj – Nacionalni park Plitvička jezera.</p>
+    <p>Tijekom izleta uživali su u predivnim slapovima i čistoj prirodi, a voditelji su ih educirali o važnosti očuvanja okoliša.</p>
     <figure>
-        <img src="images/thumbnail1.jpg" alt="Slika s natjecanja">
-        <figcaption>Slika: Prikaz školskog natjecanja</figcaption>
+        <img src="images/plitvice.jpg" alt="Ekskurzija na Plitvicama">
+        <figcaption>Slika: Učenici istražuju prirodu</figcaption>
     </figure>
-</section>
+</article>

@@ -1,12 +1,13 @@
 <?php ?>
+<link rel="stylesheet" href="style.css">
 
-<section>
-    <h1>Naslov članka 1</h1>
-    <p>Datum objave: <strong>10.06.2024.</strong></p>
-    <p>Ovo je sadržaj prvog članka koji detaljno opisuje određenu temu vezanu uz školska natjecanja.</p>
-    <p>Natjecanje je održano u našoj školi, a sudjelovali su učenici iz svih razreda...</p>
+<article>
+    <h1>Humanitarna akcija - Pomoć obiteljima u potrebi</h1>
+    <p><strong>Datum objave:</strong> 05.05.2024.</p>
+    <p>Naša škola organizirala je veliku humanitarnu akciju u kojoj su učenici i nastavnici prikupljali hranu, odjeću i školski pribor za obitelji u potrebi.</p>
+    <p>Zahvaljujući velikodušnosti svih sudionika, prikupili smo više od 200 paketa pomoći koji će biti dostavljeni obiteljima u našem gradu.</p>
     <figure>
-        <img src="images/thumbnail1.jpg" alt="Slika s natjecanja">
-        <figcaption>Slika: Prikaz školskog natjecanja</figcaption>
+        <img src="images/humanitarna_akcija.jpeg" alt="Humanitarna akcija u školi">
+        <figcaption>Slika: Učenici pripremaju pakete pomoći</figcaption>
     </figure>
-</section>
+</article>

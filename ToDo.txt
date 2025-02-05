@@ -1,7 +1,6 @@
-change banner image
+all: početna, galerija
 
-add style for responsive news
+- userid je sad svugdje.
+- dodati thumbnails za novosti, slikicu za stranicu
 
-add video for o nama
-
-all: početna, kontakt, galerija
+mobitel responsiveness?

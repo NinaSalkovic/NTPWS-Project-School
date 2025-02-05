@@ -1,11 +1,7 @@
-<!-- svaki članak mora imati malu sliku (thumbnail), naslov, kratak tekst, datum objave i veza na više o tom članku. -->
-<link rel="stylesheet" href="style.css">
-
-
 <section>
-    <h1>Novosti</h1>
-    <p>Ovdje možete pronaći najnovije vijesti i članke iz naše škole.</p>
+        
     <div class="articles">
+        <!-- Static (Manual) News -->
         <article>
             <a href="index.php?menu=2&clanak=1">
                 <img src="images/thumbnail1.jpg" alt="Članak 1">
@@ -42,22 +38,27 @@
             <a href="index.php?menu=2&clanak=5">
                 <img src="images/thumbnail5.jpg" alt="Članak 5">
                 <h2>Radionica o sigurnosti na internetu</h2>
-                <p> sklopu edukacijskih aktivnosti, u školi je održana radionica o sigurnosti na internetu...</p>
+                <p>U sklopu edukacijskih aktivnosti, u školi je održana radionica o sigurnosti na internetu...</p>
                 <p><strong>Datum objave: 10.02.2024.</strong></p>
             </a>
         </article>
+
+        <!-- Approved News from Database -->
+        <?php
+        include 'db_connect.php';
+
+        $result = $conn->query("SELECT * FROM news WHERE status = 'approved' ORDER BY created_at DESC");
+
+        while ($row = $result->fetch_assoc()) {
+            echo '<article>';
+            echo '<a href="index.php?menu=2&clanak=' . $row['id'] . '">';
+            echo '<img src="images/' . ($row['image'] ? $row['image'] : 'default.jpg') . '" alt="' . htmlspecialchars($row['title']) . '">';
+            echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
+            echo '<p>' . htmlspecialchars(substr($row['content'], 0, 100)) . '...</p>';
+            echo '<p><strong>Datum objave: ' . date('d.m.Y.', strtotime($row['created_at'])) . '</strong></p>';
+            echo '</a>';
+            echo '</article>';
+        }
+        ?>
     </div>
-
-    <?php
-include 'db_connect.php';
-
-$result = $conn->query("SELECT * FROM news WHERE status = 'approved' ORDER BY created_at DESC");
-
-while ($row = $result->fetch_assoc()) {
-    echo "<h2>{$row['title']}</h2>";
-    echo "<p>{$row['content']}</p>";
-    echo "<p><small>Datum objave: {$row['created_at']}</small></p>";
-}
-?>
-
 </section>

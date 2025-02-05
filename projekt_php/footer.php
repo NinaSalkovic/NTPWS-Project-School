@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-content">
-        <p>&copy; 2024 PHP Projekt. Sva prava pridržana.</p>
+        <p>&copy; 2025 PHP Projekt. Sva prava pridržana.</p>
         <div class="social-links">
             <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
             <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>

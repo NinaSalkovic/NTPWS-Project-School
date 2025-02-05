@@ -9,7 +9,7 @@
     </div>
 
     <div class="video-section">
-        <h2>Naša škola u videozapisu</h2>
+        <h2>OŠ Antuna Radića</h2>
         <video controls>
             <source src="videos/onama.mp4" type="video/mp4">
             <source src="videos/onama.ogv" type="video/ogg">

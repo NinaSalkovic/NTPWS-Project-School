@@ -20,7 +20,8 @@ $menu = isset($_GET['menu']) ? (int) $_GET['menu'] : 1;
     <meta name="description" content="PHP project 24/25">
     <meta name="keywords" content="school, blog, project">
     <meta name="author" content="Nina Šalković">
-    <title>PHP Projekt</title>
+    <link rel="icon" type="image/png" href="images/school.png">
+    <title>OŠ Antun Radić</title>
 </head>
 
 <body>
@@ -89,13 +90,5 @@ $menu = isset($_GET['menu']) ? (int) $_GET['menu'] : 1;
 
     <?php include 'footer.php'; ?>
 </body>
-
-<?php
-if (isset($_SESSION['user_id'])) {
-    echo "User ID: " . $_SESSION['user_id'];
-} else {
-    echo "User is not logged in.";
-}
-?>
 
 </html>

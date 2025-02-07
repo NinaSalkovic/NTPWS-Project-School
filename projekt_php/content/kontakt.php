@@ -29,7 +29,7 @@
         <div class="map-container">
             <h2>Naša lokacija</h2>
             <iframe 
-                src="https://www.google.com/maps/embed/v1/place?q=krapina&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.0000000000005!2d15.8789!3d46.1608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6f6f6f6f6f6%3A0x6f6f6f6f6f6f6f6f!2sKrapina%2C%20Croatia!5e0!3m2!1sen!2shr!4v1610000000000!5m2!1sen!2shr" 
                 width="100%" 
                 height="400" 
                 style="border:0;" 

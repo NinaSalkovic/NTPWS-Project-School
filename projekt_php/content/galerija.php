@@ -1,54 +1,44 @@
-
-<!-- Galerija slika mora imati minimalno 10 slika. -->
-<!-- Slike se otvaraju uvećane klikom na sliku u novom prozoru. -->
-<!-- Svaka slika mora imati opis. -->
-
-<?php ?>
-
-
 <section>
-	<h1>Galerija slika</h1>
-	<p>Dobrodošli u našu galeriju! Kliknite na sliku za uvećani prikaz.</p>
-	<section class="gallery">
+    <section class="gallery">
+	<figure>
+            <a href="images/trokut.jpg" target="_blank"><img src="images/trokut.jpg" alt="Trokut"></a>
+            <figcaption>Trokut</figcaption>
+        </figure>
 		<figure>
-			<a href="images/slika1_large.jpg" target="_blank"><img src="images/slika1_thumb.jpg" alt="Opis slike 1"></a>
-			<figcaption>Opis slike 1</figcaption>
-		</figure>
+            <a href="images/bojice.jpg" target="_blank"><img src="images/bojice.jpg" alt="Bojice"></a>
+            <figcaption>Bojice</figcaption>
+        </figure>
+        <figure>
+            <a href="images/dani_sporta.jpg" target="_blank"><img src="images/dani_sporta.jpg" alt="Dani sporta"></a>
+            <figcaption>Dani sporta</figcaption>
+        </figure>
 		<figure>
-			<a href="images/slika2_large.jpg" target="_blank"><img src="images/slika2_thumb.jpg" alt="Opis slike 2"></a>
-			<figcaption>Opis slike 2</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika3_large.jpg" target="_blank"><img src="images/slika3_thumb.jpg" alt="Opis slike 3"></a>
-			<figcaption>Opis slike 3</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika4_large.jpg" target="_blank"><img src="images/slika4_thumb.jpg" alt="Opis slike 4"></a>
-			<figcaption>Opis slike 4</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika5_large.jpg" target="_blank"><img src="images/slika5_thumb.jpg" alt="Opis slike 5"></a>
-			<figcaption>Opis slike 5</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika6_large.jpg" target="_blank"><img src="images/slika6_thumb.jpg" alt="Opis slike 6"></a>
-			<figcaption>Opis slike 6</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika7_large.jpg" target="_blank"><img src="images/slika7_thumb.jpg" alt="Opis slike 7"></a>
-			<figcaption>Opis slike 7</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika8_large.jpg" target="_blank"><img src="images/slika8_thumb.jpg" alt="Opis slike 8"></a>
-			<figcaption>Opis slike 8</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika9_large.jpg" target="_blank"><img src="images/slika9_thumb.jpg" alt="Opis slike 9"></a>
-			<figcaption>Opis slike 9</figcaption>
-		</figure>
-		<figure>
-			<a href="images/slika10_large.jpg" target="_blank"><img src="images/slika10_thumb.jpg" alt="Opis slike 10"></a>
-			<figcaption>Opis slike 10</figcaption>
-		</figure>
-	</section>
+            <a href="images/sigurnost_internet.png" target="_blank"><img src="images/sigurnost_internet.png" alt="Sigurnost na internetu"></a>
+            <figcaption>Sigurnost na internetu</figcaption>
+        </figure>
+        <figure>
+            <a href="images/humanitarna_akcija.jpg" target="_blank"><img src="images/humanitarna_akcija.jpg" alt="Humanitarna akcija"></a>
+            <figcaption>Humanitarna akcija</figcaption>
+        </figure>
+        <figure>
+            <a href="images/math_competition.jpg" target="_blank"><img src="images/math_competition.jpg" alt="Matematičko natjecanje"></a>
+            <figcaption>Matematičko natjecanje</figcaption>
+        </figure>
+        <figure>
+            <a href="images/plitvice.jpg" target="_blank"><img src="images/plitvice.jpg" alt="Plitvice"></a>
+            <figcaption>Plitvice</figcaption>
+        </figure>
+        <figure>
+            <a href="images/school_books.jpg" target="_blank"><img src="images/school_books.jpg" alt="Školske knjige"></a>
+            <figcaption>Školske knjige</figcaption>
+        </figure>
+        <figure>
+            <a href="images/school_building.jpg" target="_blank"><img src="images/school_building.jpg" alt="Školska zgrada"></a>
+            <figcaption>Školska zgrada</figcaption>
+        </figure>        
+        <figure>
+            <a href="images/ucionica.jpg" target="_blank"><img src="images/ucionica.jpg" alt="Učionica"></a>
+            <figcaption>Učionica</figcaption>
+        </figure>
+    </section>
 </section>

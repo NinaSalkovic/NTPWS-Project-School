@@ -123,6 +123,10 @@ footer {
     background: linear-gradient(180deg, #ffbc2c, #ff7e00);
     color: white;
     margin-top: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer a {
@@ -407,3 +411,138 @@ section {
     padding: 0;
     text-align: center;
 }
+
+
+
+
+/* pocetna */
+.intro {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro .text {
+    max-width: 70%;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+     text-align: justify;
+}
+
+.intro .image img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.activities {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.activities h2 {
+    color: #145c3c;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+
+.activity-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.activity {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 250px;
+    text-align: center;
+}
+
+.activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.activity img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .intro .text {
+        max-width: 90%;
+    }
+
+    .activity-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity {
+        width: 90%;
+    }
+}
+
+
+
+
+
+/* Gallery section styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery figcaption {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.gallery a {
+    text-decoration: none;
+}
+
+.gallery a:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+

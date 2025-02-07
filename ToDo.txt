@@ -1,6 +1,0 @@
-all: početna, galerija
-
-- userid je sad svugdje.
-- dodati thumbnails za novosti, slikicu za stranicu
-
-mobitel responsiveness?

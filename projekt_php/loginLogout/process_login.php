@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
         session_start();
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['role'] = $user['role'];
-        header("Location: ../admin.php");
+        header("Location: ../index.php");
         exit();
     } else {
         echo "Pogrešna lozinka.";

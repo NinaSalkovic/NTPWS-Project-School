@@ -4,45 +4,70 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
 
-/* Navigation Bar */
+/* nav */
 nav {
     background-color: #326445;
-    padding: 20px 0; /* Increased padding for bigger navbar */
-    position: sticky; /* Makes navbar sticky */
-    top: 0; /* Keeps it at the top of the page */
-    z-index: 1000; /* Ensures navbar stays on top of other content */
-    width: 100%; /* Ensures the navbar spans the full width */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for effect */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    min-width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    display: flex;
+    gap: 15px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+    padding: 8px 12px;
+    display: block;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+@media (max-width: 700px) {
+    nav {
+        flex-wrap: wrap; /* Allows wrapping on small screens */
+        padding: 5px 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
 }
 
-/* Main Content */
+
+/* Main */
 .container {
     width: 75%;
+    max-width:100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
     margin: 2dvb auto;
     background: white;
     padding: 30px;
@@ -126,7 +151,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    box-sizing: border-box;
+    min-width: 100%;
 }
 
 footer a {
@@ -137,11 +162,10 @@ footer a {
 }
 
 footer a:hover {
-    color: #ff7e00; /* Change link color on hover */
+    color: #ff7e00;
     text-decoration: underline;
 }
 
-/* Make sure the footer text and links are more visually appealing */
 footer p {
     font-size: 16px;
     margin-bottom: 10px;
@@ -159,15 +183,14 @@ footer ul li {
 }
 
 footer ul li a {
-    font-size: 18px; /* Adjust link font size */
+    font-size: 18px; 
     color: white;
 }
 
 footer ul li a:hover {
-    color: #ff7e00; /* Link hover color */
+    color: #ff7e00; 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .container, article {
         width: 95%;
@@ -277,14 +300,12 @@ article img {
     margin-bottom: 10px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 600px) {
     .articles {
         grid-template-columns: 1fr;
     }
 }
 
-* Contact Page Styles */
 .contact-container {
     width: 75%;
     margin: 40px auto;
@@ -294,24 +315,21 @@ article img {
     border-radius: 10px;
 }
 
-/* Contact Section */
 .contact-container h1 {
     text-align: center;
     color: #145c3c;
     margin-bottom: 20px;
 }
 
-/* Contact Layout */
 .contact-content {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
-/* Contact Form */
 .contact-form {
     flex: 1;
-    max-width: 48%; /* Set maximum width to 48% to avoid overflow */
+    max-width: 48%;
 }
 
 .contact-form h2 {
@@ -344,7 +362,6 @@ article img {
     min-height: 120px;
 }
 
-/* Submit Button */
 button {
     padding: 12px;
     background-color: #145c3c;
@@ -363,7 +380,7 @@ button:hover {
 /* Google Maps */
 .map-container {
     flex: 1;
-    max-width: 48%; /* Set maximum width to 48% */
+    max-width: 48%;
 }
 
 .map-container h2 {
@@ -378,7 +395,6 @@ button:hover {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 900px) {
     .contact-content {
         flex-direction: column;
@@ -387,11 +403,11 @@ button:hover {
 
     .contact-form,
     .map-container {
-        max-width: 100%; /* Allow the form and map to take up the full width on small screens */
+        max-width: 100%;
     }
 
     .map-container iframe {
-        height: 300px; /* Adjust map height for smaller screens */
+        height: 300px;
     }
 }
 
@@ -407,7 +423,8 @@ section {
     background: url('your-banner-image.jpg') no-repeat center center;
     background-size: cover;
     color: white;
-    width: 100%;
+    
+    min-width: 100%;
     padding: 0;
     text-align: center;
 }
@@ -501,7 +518,7 @@ section {
 
 
 
-/* Gallery section styling */
+/* galerija */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;

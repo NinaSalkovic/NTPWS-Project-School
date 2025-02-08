@@ -7,7 +7,7 @@
     <p>U sklopu edukacijskih aktivnosti, u školi je održana radionica o sigurnosti na internetu. Učenici su naučili kako se zaštititi od online prijetnji, lažnih informacija i cyberbullyinga.</p>
     <p>Stručnjaci su predstavili korisne savjete kako sigurno koristiti društvene mreže i prepoznati opasnosti na internetu.</p>
     <figure>
-        <img src="images/sigurnost_internet.jpg" alt="Radionica o sigurnosti na internetu">
+        <img src="images/sigurnost_internet.png" alt="Radionica o sigurnosti na internetu">
         <figcaption>Slika: Predavanje o sigurnosti na internetu</figcaption>
     </figure>
 </article>

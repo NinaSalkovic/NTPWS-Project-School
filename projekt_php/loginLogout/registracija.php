@@ -2,7 +2,15 @@
 include '../db_connect.php';
 ?>
 
+<html>
+<head>
+    <link rel="stylesheet" href="../style.css">    
+    <link rel="icon" type="image/png" href="../images/school.png">    
+    <title>Registracija</title>
+</head>
+
 <section>
+    <div class="registration-container">
     <form action="process_registration.php" method="POST">
         <label for="ime">Ime:</label>
         <input type="text" id="ime" name="ime" required>
@@ -37,4 +45,6 @@ include '../db_connect.php';
 
         <button type="submit">Registriraj se</button>
     </form>
+    </div>
 </section>
+</html>

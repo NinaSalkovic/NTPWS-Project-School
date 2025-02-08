@@ -4,7 +4,7 @@
         <!-- Contact Form -->
         <div class="contact-form">
             <h2>Pošaljite nam poruku</h2>
-            <form action="process_form.php" method="POST">
+            <form action="process_form" method="POST">
                 <div class="form-group">
                     <label for="first-name">Ime:</label>
                     <input type="text" id="first-name" name="first-name" required>
